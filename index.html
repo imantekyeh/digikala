@@ -48,12 +48,14 @@ li {
         <div id="hedader_right" style="width: 720px;float: right;">
             <div id="header_right_top" style="height: 40px"><span
                     style="width: 24px;height: 24px ;background: url(images/lock.png);display:block ;float: right;"></span><a
-                    class="yekan fontsm" href="/login" style="float: right ;margin:0 10px 0 0">فروشگاه اینترنتی یاکا
+                    class="yekan fontsm" href="/login" style=" color: cadetblue;float: right ;margin:0 10px 0 0">فروشگاه
+                اینترنتی یاکا
                 کالا،واردشوید </a>
                 <span style="width: 24px;height: 24px ;background: url(images/register.png );display: block ;float: right;margin:0 20px 0 0">
                     </span>
                 <a
-                        class="yekan fontsm" href="/sinup" style="float: right;margin:0 10px 0 0 ;"> ثبت نام</a>
+                        class="yekan fontsm" href="/sinup" style="color: cadetblue;float: right;margin:0 10px 0 0 ;">
+                    ثبت نام</a>
 
             </div>
             <div id="header_right_bottom" style="height: 50px;">
@@ -83,16 +85,20 @@ li {
     background: #f5f4f6;
     box-shadow: 0 2px 2px 0 #b3b3b3;
     border-top: 1px solid #b3b2b4;
+    z-index: 2;
 }
 
 #menu_top > ul {
     position: relative;
     padding: 0;
+    cursor: pointer;
 }
 
 #menu_top > ul > li {
     float: right;
     height: 40px;
+    width: 110px;
+    cursor: pointer;
 }
 
 #menu_top > ul > li > a {
@@ -101,6 +107,7 @@ li {
     height: 40px;
     font-size: 11pt;
     line-height: 40px;
+    cursor: pointer;
 }
 
 .menu_down_icon {
@@ -147,6 +154,7 @@ li {
 
 .top_menu3_col_ul li {
     padding-right: 15px;
+    cursor: pointer;
 
 }
 
@@ -160,10 +168,9 @@ li {
 }
 
 .activ_menu {
-box-shadow: 0 1px 1px 1px #d1d0cf;
+    box-shadow: 0 1px 1px 1px #d1d0cf;
     background: #fbfaf9;
 }
-
 
 .activ_menu > a {
     color: red;
@@ -471,6 +478,7 @@ box-shadow: 0 1px 1px 1px #d1d0cf;
         height: 310px;
         border-radius: 4px;
         overflow: hidden;
+        position: relative;
     }
 
     #slider_img {
@@ -483,15 +491,94 @@ box-shadow: 0 1px 1px 1px #d1d0cf;
         display: none;
     }
 
+    #slider #prev {
+        display: block;
+        width: 30px;
+        height: 50px;
+        background: url(images/arrow_slider.png) no-repeat;
+        position: absolute;
+        right: 0;
+        top: 125px;
+        cursor: pointer;
+
+        background-position: 0 -33px;
+    }
+
+    #slider #next {
+        display: block;
+        width: 30px;
+        height: 50px;
+        background: url(images/arrow_slider.png) no-repeat;
+        position: absolute;
+        left: 13px;
+        top: 108px;
+        background-position: 0 16px;
+        cursor: pointer;
+
+    }
+
     #slider_navigator {
         width: 100%;
         height: 50px;
         background: rgba(0, 0, 0, .5);
     }
 
+    #slider_navigator ul {
+        padding: 0;
+        height: 50px;
+    }
+
+    #slider_navigator ul li {
+        float: right;
+        height: 50px;
+        width: 178px;
+    }
+
+    #slider_navigator ul li a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        font-family: yekan;
+        font-size: 10pt;
+        color: #ffff;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+    }
+
+    #slider_navigator .active > a {
+        background: #fff;
+        color: #000;
+        position: relative;
+
+    }
+
+    #slider_navigator .active > a::after {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 11.5px 14px 11.5px;
+        border-color: transparent transparent #fff transparent;
+        position: absolute;
+        top: -14px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        content: "";
+    }
+
+
 </style>
 <div id="content">
     <div id="slider">
+
+        <div>
+            <span id="prev"></span>
+        </div>
+        <div>
+            <span id="next"></span>
+        </div>
+
         <div id="slider_img">
             <a>
                 <img class="item" src="images/slider1.jpg">
@@ -500,55 +587,195 @@ box-shadow: 0 1px 1px 1px #d1d0cf;
                 <img class="item" src="images/slider2.jpg">
             </a>
             <a>
-                <img class="item" src="images/slider3.jpg">
+                <img class="item" src="images/slider_durbin.jpg">
             </a>
             <a>
-                <img class="item" src="images/slider4.jpg">
+                <img class="item" src="images/slider-lavazem.jpg">
             </a>
             <a>
-                <img class="item" src="images/slider5.jpg">
+                <img class="item" src="images/slider-wood.jpg">
             </a>
-
         </div>
-        <div id="slider_navigator"></div>
-    </div>
 
-    <button id="btn">start</button>
+        <div id="slider_navigator">
+            <ul>
+                <li>
+                    <a>لوازم بهداشتی</a>
+                </li>
+                <li>
+                    <a>لپتاپ جدید سری vio</a>
+                </li>
+                <li>
+                    <a>لوازم جانبی دوربین</a>
+                </li>
+                <li>
+                    <a>لوازم خانگی</a>
+                </li>
+                <li>
+                    <a>سرویس چوب</a>
+                </li>
+            </ul>
+        </div>
+
+        <style>
+            #servicesfech {
+                height: 76px;
+                margin: 10px 0 0 0;
+                background: #f9f9f9;
+                width: 890px;
+                border-radius: 4px;
+                box-shadow: 0 2px 1px 1px #b8b0bc;
+                overflow: hidden;
+            }
+
+            #servicesfech ul {
+                width: 100%;
+                height: 100%;
+                padding: 0;
+            }
+
+            #servicesfech ul li {
+                width: 178px;
+                height: 100%;
+                float: right;
+            }
+
+            #servicesfech ul li a {
+                width: 100%;
+                height: 51px;
+                display: block;
+                font-family: yekan;
+                font-size: 10pt;
+                padding-top: 25px;
+                cursor: pointer;
+            }
+
+            #servicesfech ul li a i {
+                width: 40px;;
+                vertical-align: middle;
+                height: 24px;
+                display: inline-block;
+                background: url(images/slices.png);
+            }
+        </style>
+
+    </div>
+    <div id="servicesfech">
+        <ul>
+            <li>
+                <a>
+                    <i style="background-position: -210px -473px"></i>
+                    7 روز ضمانت بازگشت
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i style="background-position: -252px -473px"></i>
+                    پرداخت در محل
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i style="background-position: -309px -473px"></i>
+                    پست سریع
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i style="background-position: -158px -473px"></i>
+                    ضمانت اصل بودن کالا
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i style="background-position: -101px -474px"></i>
+                    تضمین بهترین قیمت
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
 
 <script>
 
     var sliderTag = $('#slider');
     var sliderItem = sliderTag.find('.item');
+    var sliderNum = sliderItem.length;
     var nextSlide = 1;
+    var sliderNavigator = sliderTag.find('#slider_navigator ul li');
+    var timeout = 3000;
 
     function slider() {
+        if (nextSlide > sliderNum) {
+            nextSlide = 1;
+        }
+        if (nextSlide < 1) {
+            nextSlide = sliderNum;
+        }
         sliderItem.hide();
+        sliderNavigator.removeClass('active');
         sliderItem.eq(nextSlide - 1).fadeIn(100);
+        sliderNavigator.eq(nextSlide - 1).addClass('active');
         nextSlide++;
     }
 
-    $('#btn').click(function () {
+    slider();
+    var sliderinterval = setInterval(slider, timeout);
+    sliderTag.mouseleave(function () {
+        clearInterval(sliderinterval);
+        sliderinterval = setInterval(slider, timeout);
+
+    });
+
+    function pervSlid() {
+        clearInterval(sliderinterval);
+        nextSlide = nextSlide - 2;
         slider();
+    }
+
+    function nextSlid() {
+        clearInterval(sliderinterval);
+
+        slider();
+    }
+
+    function goToSlide(index) {
+        clearInterval(sliderinterval);
+        nextSlide = index;
+        slider();
+
+    }
+
+    $('#slider_navigator li').click(function () {
+        var index = $(this).index();
+        goToSlide(index + 1)
+    });
+
+    $('#next').click(function () {
+        nextSlid();
+    });
+
+    $('#prev').click(function () {
+        pervSlid();
     });
 
     var timer = {};
     $('#menu_top li').hover(function () {
         var tag = $(this);
         var tagAttr = tag.attr('data-time');
-        tag.addClass('activ_menu');
         clearTimeout(timer[tagAttr]);
         timer[tagAttr] = setTimeout(function () {
             $('> ul', tag).fadeIn(0);
-            $('> .sub_menu3', tag).fadeIn(0);
+            tag.addClass('activ_menu');
+            $('> .sub_menu3 ', tag).fadeIn(0);
         }, 500);
     }, function () {
         var tag = $(this);
         var tagAttr = tag.attr('data-time');
-        tag.removeClass('activ_menu');
         clearTimeout(timer[tagAttr]);
         timer[tagAttr] = setTimeout(function () {
             $('> ul', tag).fadeOut(0);
+            tag.removeClass('activ_menu');
             $('> .sub_menu3', tag).fadeOut(0);
         }, 400);
     });</script>
