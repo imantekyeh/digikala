@@ -479,6 +479,8 @@ li {
         border-radius: 4px;
         overflow: hidden;
         position: relative;
+        box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
+
     }
 
     #slider_img {
@@ -624,8 +626,9 @@ li {
                 background: #f9f9f9;
                 width: 890px;
                 border-radius: 4px;
-                box-shadow: 0 2px 1px 1px #b8b0bc;
                 overflow: hidden;
+                box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
+
             }
 
             #servicesfech ul {
@@ -694,11 +697,215 @@ li {
             </li>
         </ul>
     </div>
+    <style>
+        #slider2 {
+            width: 890px;
+            height: 304px;
+            background: #ececec;
+            margin-top: 10px;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        #slider2_content {
+            width: 705px;
+            height: 100%;
+            float: right;
+            background: url(images/slider2_bg.jpg) no-repeat;
+        }
+
+        #slider2_content a {
+            display: block;
+            height: 100%;
+        }
+
+        #slider2_content_r {
+            width: 400px;
+            height: 100%;
+            float: right;
+        }
+
+        #slider2_content_r > p:nth-child(1) {
+            color: red;
+            font-size: 13pt;
+            font-family: yekan;
+            margin: 30px 30px 0 0;
+        }
+
+        #slider2_content_r .price_info {
+            height: 35px;
+            margin: 10px 30px;
+        }
+
+        .price_info .price_info_r {
+            width: 70px;
+            height: 100%;
+            background: #B8B8B8;
+            float: right;
+            position: relative;
+            color: white;
+            font-family: yekan;
+            font-size: 10.5pt;
+            text-align: center;
+            line-height: 32px;
+
+        }
+
+        #slider2_content_l img {
+            width: 250px;
+            height: 80%;
+            margin-right: 27px;
+        }
+
+        #slider2_content_l {
+            width: 305px;
+            height: 100%;
+            float: left;
+        }
+
+        #slider2_left {
+            width: 184px;
+            float: left;
+            height: 100%;
+            border-right: 1px solid rgba(175, 175, 175, 0.52);
+            background: #E3E3E3;
+        }
+
+        .price_info .price_info_r::after {
+            content: " ";
+            width: 96%;
+            border-bottom: 1px solid #3B3B3B;
+            transform: rotate(-25deg);
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 17px;
+        }
+
+        .price_info .price_info_r::before {
+            content: " ";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7.5px 12px 7.5px 0;
+            border-color: transparent #B8B8B8 transparent transparent;
+            position: absolute;
+            top: 0;
+            left: -12px;
+            bottom: 0;
+            margin: auto 0;
+            z-index: 2;
+
+        }
+
+        .price_info .price_info_l::after {
+            content: " ";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7.5px 13px 7.5px 0;
+            border-color: transparent #ffffff transparent transparent;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto 0;
+
+        }
+
+        .price_info .price_info_l {
+            margin-right: 2px;
+            width: 155px;
+            height: 100%;
+            float: right;
+            background: rgba(235, 0, 23, 0.73);
+            position: relative;
+            color: white;
+            font-family: yekan;
+            font-size: 10.5pt;
+            text-align: center;
+            line-height: 32px;
+        }
+
+        #slider2_left ul {
+            padding: 0;
+        }
+
+        #slider2_left ul li {
+            height: 38px;
+            width: 100%;
+        }
+
+        #slider2_left ul li a {
+            height: 38px;
+            width: 100%;
+            display: block;
+            font-family: yekan;
+            font-size: 10pt;
+            text-align: center;
+            line-height: 32px;
+        }
+
+
+    </style>
+    <div id="slider2">
+        <div id="slider2_content">
+            <a>
+                <div id="slider2_content_r">
+                    <p>جشنواره ماه نو</p>
+                    <div class="price_info">
+                        <div class="price_info_r">29</div>
+                        <div class="price_info_l">18 هزار تومان</div>
+
+                    </div>
+                    <p class="yekan fontsm" style="float: right;width: 100%;margin: 5px 30px">توان مصرفی</p>
+                    <p class="yekan fontsm" style="float: right;width: 100%;margin: 10px 30px">مقاوم در برابر ضربه</p>
+                </div>
+                <div id="slider2_content_l">
+                    <p style="text-align: center" class="fontlg yekan">
+                        دسته بازی گیمینگ
+                    </p>
+                    <img src="images/slider2_item1.jpg">
+                </div>
+
+            </a>
+        </div>
+        <div id="slider2_left">
+            <ul>
+                <li><a>
+                    دسته بازی
+                </a></li>
+                <li><a>
+                    آینه و شمعدانی
+                </a></li>
+                <li><a>
+                    مبلمان اداری
+                </a></li>
+                <li><a>
+                    یخچال ال جی
+                </a></li>
+                <li><a>
+                    فرش دستباف
+                </a></li>
+                <li><a>
+                    ال ای دی سامسونگ
+                </a></li>
+                <li><a>
+                    لوستر
+                </a></li>
+                <li><a>
+                    لپ تاپ ایسوس
+                </a></li>
+            </ul>
+        </div>
+    </div>
 </div>
 
 <script>
 
     var sliderTag = $('#slider');
+    var sliderTag2 = $('slider2_left');
     var sliderItem = sliderTag.find('.item');
     var sliderNum = sliderItem.length;
     var nextSlide = 1;
@@ -745,6 +952,7 @@ li {
         slider();
 
     }
+
 
     $('#slider_navigator li').click(function () {
         var index = $(this).index();
