@@ -709,6 +709,7 @@ li {
             margin-top: 10px;
             border-radius: 4px;
             overflow: hidden;
+            position: relative;
             box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
         }
 
@@ -719,25 +720,22 @@ li {
             background: url(images/slider2_bg.jpg) no-repeat;
         }
 
-        #slider2_content a {
-            display: block;
-            height: 100%;
-        }
+        #slider2_content > a p:nth-child(1) {
 
-        #slider2_content_r {
-            width: 400px;
-            height: 304px;
-            float: right;
-        }
-
-        #slider2_content_r > p:nth-child(1) {
             color: red;
             font-size: 13pt;
             font-family: yekan;
             margin: 30px 30px 0 0;
         }
 
-        #slider2_content_r .price_info {
+        .slider2_content_r {
+            width: 400px;
+            height: 304px;
+            float: right;
+            position: relative;
+        }
+
+        .slider2_content_r .price_info {
             height: 35px;
             margin: 10px 30px;
         }
@@ -756,19 +754,24 @@ li {
 
         }
 
-        #slider2_content_l img {
+        .slider2_content_l img {
             width: 250px;
             height: 80%;
             margin-right: 27px;
         }
 
-        #slider2_content_l {
+        .slider2_content_l {
             width: 305px;
             height: 100%;
             float: left;
         }
 
-        #slider2_left {
+        .slider2_content_l p {
+            text-align: center !important;
+            margin-left: 40px !important;
+        }
+
+        .slider_navigator2 {
             width: 184px;
             float: left;
             height: 100%;
@@ -796,7 +799,7 @@ li {
             border-color: transparent #B8B8B8 transparent transparent;
             position: absolute;
             top: 0;
-            left: -12px;
+            left: -11px;
             bottom: 0;
             margin: auto 0;
             z-index: 2;
@@ -832,16 +835,16 @@ li {
             line-height: 32px;
         }
 
-        #slider2_left ul {
+        .slider_navigator2 ul {
             padding: 0;
         }
 
-        #slider2_left ul li {
+        .slider_navigator2 ul li {
             height: 38px;
             width: 100%;
         }
 
-        #slider2_left ul li a {
+        .slider_navigator2 ul li a {
             height: 38px;
             width: 100%;
             display: block;
@@ -851,43 +854,107 @@ li {
             line-height: 32px;
         }
 
-        #timerbing * {
-            direction: ltr;
+        .content_finish {
+            width: 705px;
+            height: 100%;
+            text-align: center;
+            line-height: 235px;
+            color: red;
+            position: absolute;
+            font-family: yekan;
+            font-size: 35pt;
+            top: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.2);
+            display: none;
+
+        }
+
+        .slider_navigator2 .active {
+            background: #d5000d;
+            color: white;
+            position: relative;
+        }
+
+        .slider_navigator2 .active::after {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 19px 0 19px 19px;
+            border-color: transparent transparent transparent #d5000d;
+            content: '';
+            position: absolute;
+            right: -19px;
+            top: 0;
+        }
+
+        .clock {
+
+            position: absolute;
+            top: 157px;
+            right: -110px;
         }
 
     </style>
     <div id="slider2">
+        <div class="clock jCountdown"></div>
+
         <div id="slider2_content">
+            <a class="item">
+                <div class="slider2_content_r">
+                    <p>جشنواره ماه نو</p>
+                    <div class="price_info">
+                        <div class="price_info_r">29</div>
+                        <div class="price_info_l">18 هزار تومان</div>
+                    </div>
+                    <p class="yekan fontsm" style="float: right;width: 100%;margin: 5px 30px">توان مصرفی</p>
+                    <p class="yekan fontsm" style="float: right;width: 100%;margin: 10px 30px">مقاوم در برابر ضربه</p>
 
-            <div id="slider2_content_r">
-                <p>جشنواره ماه نو</p>
-                <div class="price_info">
-                    <div class="price_info_r">29</div>
-                    <div class="price_info_l">18 هزار تومان</div>
-
+                    <div class="content_finish">
+                        تمام شد!
+                    </div>
                 </div>
-                <p class="yekan fontsm" style="float: right;width: 100%;margin: 5px 30px">توان مصرفی</p>
-                <p class="yekan fontsm" style="float: right;width: 100%;margin: 10px 30px">مقاوم در برابر ضربه</p>
-                <div id="timerbing" style="width: 400px;height: 50px;float: right;position: relative">
 
+                <div class="slider2_content_l">
+                    <p class="fontlg yekan">
+                        دسته بازی گیمینگ
+                    </p>
+                    <img src="images/slider2_item1.jpg">
                 </div>
-            </div>
-            <div id="slider2_content_l">
-                <p style="text-align: center" class="fontlg yekan">
-                    دسته بازی گیمینگ
-                </p>
-                <img src="images/slider2_item1.jpg">
-            </div>
+            </a>
 
+            <a class="item">
+                <div class="slider2_content_r">
+                    <p>اربعین حسینی</p>
+                    <div class="price_info">
+                        <div class="price_info_r">60</div>
+                        <div class="price_info_l">50 هزار تومان</div>
+                    </div>
+                    <p class="yekan fontsm" style="float: right;width: 100%;margin: 5px 30px">پر قدرت</p>
+                    <p class="yekan fontsm" style="float: right;width: 100%;margin: 10px 30px">سی پی یو cori7</p>
+
+
+                    <div class="content_finish">
+                        تمام شد!
+                    </div>
+                </div>
+
+                <div class="slider2_content_l">
+                    <p class="fontlg yekan">
+                        تبلت های ایسوس
+                    </p>
+                    <img src="images/slider2_3.jpg">
+                </div>
+            </a>
 
         </div>
-        <div id="slider2_left">
+        <div class="slider_navigator2">
             <ul>
                 <li><a>
                     دسته بازی
                 </a></li>
                 <li><a>
-                    آینه و شمعدانی
+                    تبلت
                 </a></li>
                 <li><a>
                     مبلمان اداری
@@ -910,40 +977,16 @@ li {
             </ul>
         </div>
     </div>
-</div>
 
+</div>
 <script type="text/javascript">
-    jQuery(document).ready(function () {
-        jQuery("#timerbing").jCountdown({
-            timeText: "2020/01/01 00:00:00",
-            timeZone: 8,
-            style: "flip",
-            color: "black",
-            width: 0,
-            textGroupSpace: 15,
-            textSpace: 0,
-            reflection: true,
-            reflectionOpacity: 10,
-            reflectionBlur: 0,
-            dayTextNumber: 4,
-            displayDay: true,
-            displayHour: true,
-            displayMinute: true,
-            displaySecond: true,
-            displayLabel: true,
-            onFinish: function () {
-                alert("finish");
-            }
-        });
-    });
+
     var sliderTag = $('#slider');
-    var sliderTag2 = $('slider2_left');
     var sliderItem = sliderTag.find('.item');
     var sliderNum = sliderItem.length;
     var nextSlide = 1;
-    var sliderNavigator = sliderTag.find('#slider_navigator ul li');
+    var sliderNavigator = sliderTag.find('.slider_navigator2 ul li');
     var timeout = 3000;
-    var clock;
 
     function slider() {
         if (nextSlide > sliderNum) {
@@ -1019,6 +1062,76 @@ li {
             tag.removeClass('activ_menu');
             $('> .sub_menu3', tag).fadeOut(0);
         }, 400);
+    });
+    // main menu and slider
+
+
+    var sliderTag2 = $('#slider2');
+    var sliderItem2 = sliderTag2.find('.item');
+    var sliderNum2 = sliderItem2.length;
+    var nextSlide2 = 1;
+    var sliderNavigator2 = sliderTag2.find('.slider_navigator2 ul li');
+    var timeout2 = 3000;
+
+    function slider2() {
+        if (nextSlide2 > sliderNum2) {
+            nextSlide2 = 1;
+        }
+        if (nextSlide2 < 1) {
+            nextSlide2 = sliderNum2;
+        }
+        sliderItem2.hide();
+        sliderNavigator2.removeClass('active');
+        sliderItem2.eq(nextSlide2 - 1).fadeIn(100);
+        sliderNavigator2.eq(nextSlide2 - 1).addClass('active');
+        nextSlide2++;
+    }
+
+    slider2();
+    var sliderinterval2 = setInterval(slider2, timeout2);
+    sliderTag2.mouseleave(function () {
+        clearInterval(sliderinterval2);
+        sliderinterval2 = setInterval(slider2, timeout2);
+
+    });
+
+    function goToSlide2(index) {
+        clearInterval(sliderinterval2);
+        nextSlide2 = index;
+        slider2();
+
+    }
+
+
+    $('.slider_navigator2 li').click(function () {
+        var index = $(this).index();
+        goToSlide2(index + 1)
+    });
+    // clock timer
+
+    jQuery(document).ready(function () {
+        jQuery(".jCountdown").jCountdown({
+            timeText: "2018/11/25 02:38:00",
+            timeZone: 8,
+            style: "flip",
+            color: "black",
+            width: 0,
+            textGroupSpace: 15,
+            textSpace: 0,
+            reflection: true,
+            reflectionOpacity: 10,
+            reflectionBlur: 0,
+            dayTextNumber: 0,
+            displayDay: true,
+            displayHour: true,
+            displayMinute: true,
+            displaySecond: true,
+            displayLabel: true,
+
+            onFinish: function () {
+                $('.content_finish').fadeIn(200);
+            }
+        });
     });
 
 
