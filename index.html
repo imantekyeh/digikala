@@ -711,6 +711,7 @@ li {
             overflow: hidden;
             position: relative;
             box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
         }
 
         #slider2_content {
@@ -977,10 +978,196 @@ li {
             </ul>
         </div>
     </div>
+    <style>
+        .sliderScrool {
+            width: 890px;
+            height: 305px;
+            box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+        }
 
+        .sliderScrool h3 {
+            height: 35px;
+            background: #ececec;
+            margin: 0;
+            padding-right: 5px;
+            font-size: 10.5pt;
+            font-family: yekan;
+            padding-top: 10px;
+            font-weight: normal;
+        }
+
+        .sliderScrool_conent {
+            width: 890px;
+            height: 260px;
+        }
+
+        .sliderScrool_prv, .sliderScrool_next {
+            width: 55px;
+            height: 100%;
+            float: right;
+
+        }
+
+        .sliderScrool_main {
+            width: 780px;
+            height: 100%;
+            float: right;
+            overflow: hidden;
+
+        }
+
+        .sliderScrool_prv .prev2 {
+            background: url(images/slices.png) no-repeat;
+            width: 16px;
+            height: 35px;
+            background-position: -852px -677px;
+            display: block;
+            margin-top: 110px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .sliderScrool_next .next2 {
+            background: url(images/slices.png) no-repeat;
+            width: 16px;
+            height: 35px;
+            background-position: -813px -677px;
+            display: block;
+            margin-top: 110px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .sliderScrool .sliderScrool_main ul {
+            padding: 0;
+            height: 100%;
+            width: 975px;
+        }
+
+        .sliderScrool .sliderScrool_main ul li {
+            width: 195px;
+            height: 100%;
+            float: right;
+        }
+
+        .sliderScrool .sliderScrool_main ul li a {
+            display: block;
+            text-align: center;
+        }
+
+        .sliderScrool .price {
+            color: #52cb53;
+        }
+
+        .sliderScrool .scorol_p {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .sliderScrool .img_scrool {
+            padding-top: 20px;
+        }
+    </style>
+    <div class="sliderScrool">
+        <h3>همه چی در یاکا</h3>
+        <div class="sliderScrool_conent">
+
+            <div class="sliderScrool_prv">
+                <span class="prev2"></span>
+            </div>
+            <div class="sliderScrool_main">
+                <ul>
+                    <li>
+                        <a>
+                            <img class="img_scrool" src="images/sliderscroll2_1.jpg">
+                            <img src="images/exclusive-blue.png">
+                            <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                            <span class="price yekan fontsm">1,200,000</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img class="img_scrool" src="images/sliderscroll2_2.jpg">
+                            <img src="images/exclusive-blue.png">
+                            <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                            <span class="price yekan fontsm">1,200,000</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img class="img_scrool" src="images/sliderscroll2_3.jpg">
+                            <img src="images/exclusive-blue.png">
+                            <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                            <span class="price yekan fontsm">1,200,000</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img class="img_scrool" src="images/sliderscroll2_4.jpg">
+                            <img src="images/exclusive-blue.png">
+                            <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                            <span class="price yekan fontsm">1,200,000</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img class="img_scrool" src="images/sliderscroll2_4.jpg">
+                            <img src="images/exclusive-blue.png">
+                            <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                            <span class="price yekan fontsm">1,200,000</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sliderScrool_next">
+                <span class="next2"></span>
+            </div>
+        </div>
+
+    </div>
 </div>
 <script type="text/javascript">
+    var scroolSliderTag = $('.sliderScrool');
+    var scroolSliderUl = scroolSliderTag.find('.sliderScrool_main ul');
+    var scroolSliderItems = scroolSliderUl.find('li');
+    var scroolSlidernumer = scroolSliderItems.length;
+    var scrollNumber = Math.ceil(scroolSlidernumer / 4);
+    var maxslider = -(scrollNumber - 1) * 780;
 
+    function scroolslider(direction) {
+        var marghinOld = scroolSliderUl.css('margin-right');
+        marghinOld = parseFloat(marghinOld);
+        var marginrightNew;
+        if (direction == 'left') {
+            marginrightNew = marghinOld - 780;
+        }
+        if (direction == 'right') {
+            marginrightNew = marghinOld + 780;
+        }
+        if (marginrightNew < maxslider) {
+            marginrightNew = 0;
+        }
+        if (marginrightNew > 0) {
+            marginrightNew = maxslider;
+        }
+        scroolSliderUl.animate({'marginRight': marginrightNew}, 3000)
+
+    }
+
+    $('.next2').click(function () {
+        scroolslider('left');
+    });
+    $('.prev2').click(function () {
+        scroolslider('right');
+    });
+
+
+    // mainslider
     var sliderTag = $('#slider');
     var sliderItem = sliderTag.find('.item');
     var sliderNum = sliderItem.length;
@@ -1043,6 +1230,7 @@ li {
         pervSlid();
     });
 
+    // main_menu
     var timer = {};
     $('#menu_top li').hover(function () {
         var tag = $(this);
@@ -1111,7 +1299,7 @@ li {
 
     jQuery(document).ready(function () {
         jQuery(".jCountdown").jCountdown({
-            timeText: "2018/11/25 02:38:00",
+            timeText: "2018/11/28 17:54:00",
             timeZone: 8,
             style: "flip",
             color: "black",
@@ -1121,7 +1309,7 @@ li {
             reflection: true,
             reflectionOpacity: 10,
             reflectionBlur: 0,
-            dayTextNumber: 0,
+            dayTextNumber: 4,
             displayDay: true,
             displayHour: true,
             displayMinute: true,
