@@ -443,16 +443,20 @@ li {
             </ul>
             <div id="side_news"><h4 class="fontsm yekan">تازه ترین خبرها</h4>
                 <ul>
-                    <li><a>
+                    <li>
+                        <a>
                         <div class="side_news_right"><img src="images/nivea.png" width="70px" height="70px"></div>
                         <div class="side_news_left"><span>شروع محصولات جدید نیوا برا اولین بار در ایران</span>
                             <p>پنج شنبه 20 اسفند 97</p></div>
-                    </a></li>
-                    <li><a>
+                    </a>
+                    </li>
+                    <li>
+                        <a>
                         <div class="side_news_right"><img src="images/nivea.png" width="70px" height="70px"></div>
                         <div class="side_news_left"><span>شروع محصولات جدید نیوا برا اولین بار در ایران</span>
                             <p>پنج شنبه 20 اسفند 97</p></div>
-                    </a></li>
+                    </a>
+                    </li>
                     <li><a>
                         <div class="side_news_right"><img src="images/nivea.png" width="70px" height="70px"></div>
                         <div class="side_news_left"><span>شروع محصولات جدید نیوا برا اولین بار در ایران</span>
@@ -1045,7 +1049,6 @@ li {
         .sliderScrool .sliderScrool_main ul {
             padding: 0;
             height: 100%;
-            width: 975px;
         }
 
         .sliderScrool .sliderScrool_main ul li {
@@ -1132,12 +1135,15 @@ li {
     </div>
 </div>
 <script type="text/javascript">
+
+    //Start ScrollSlider
     var scroolSliderTag = $('.sliderScrool');
     var scroolSliderUl = scroolSliderTag.find('.sliderScrool_main ul');
     var scroolSliderItems = scroolSliderUl.find('li');
     var scroolSlidernumer = scroolSliderItems.length;
     var scrollNumber = Math.ceil(scroolSlidernumer / 4);
     var maxslider = -(scrollNumber - 1) * 780;
+    scroolSliderUl.css('width', scroolSlidernumer * 195);
 
     function scroolslider(direction) {
         var marghinOld = scroolSliderUl.css('margin-right');
@@ -1155,7 +1161,7 @@ li {
         if (marginrightNew > 0) {
             marginrightNew = maxslider;
         }
-        scroolSliderUl.animate({'marginRight': marginrightNew}, 3000)
+        scroolSliderUl.animate({'marginRight': marginrightNew}, 4000)
 
     }
 
@@ -1165,14 +1171,14 @@ li {
     $('.prev2').click(function () {
         scroolslider('right');
     });
+    // End Scroll Slider
 
-
-    // mainslider
+    // main Slider
     var sliderTag = $('#slider');
     var sliderItem = sliderTag.find('.item');
     var sliderNum = sliderItem.length;
     var nextSlide = 1;
-    var sliderNavigator = sliderTag.find('.slider_navigator2 ul li');
+    var sliderNavigator = sliderTag.find('#slider_navigator ul li');
     var timeout = 3000;
 
     function slider() {
@@ -1216,7 +1222,6 @@ li {
 
     }
 
-
     $('#slider_navigator li').click(function () {
         var index = $(this).index();
         goToSlide(index + 1)
@@ -1230,7 +1235,9 @@ li {
         pervSlid();
     });
 
-    // main_menu
+    // end main_slider
+
+    // main_men
     var timer = {};
     $('#menu_top li').hover(function () {
         var tag = $(this);
@@ -1251,9 +1258,9 @@ li {
             $('> .sub_menu3', tag).fadeOut(0);
         }, 400);
     });
-    // main menu and slider
+    // main_menu_end
 
-
+    //  slider2
     var sliderTag2 = $('#slider2');
     var sliderItem2 = sliderTag2.find('.item');
     var sliderNum2 = sliderItem2.length;
@@ -1295,6 +1302,9 @@ li {
         var index = $(this).index();
         goToSlide2(index + 1)
     });
+
+    // endslider2
+
     // clock timer
 
     jQuery(document).ready(function () {
@@ -1321,6 +1331,7 @@ li {
             }
         });
     });
+    // endclock
 
 
 </script>
