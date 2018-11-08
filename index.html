@@ -45,43 +45,176 @@ ul {
 
 li {
     list-style: none
-}</style>
-<body style="margin: 0;background: #ccc">
-<header style="background: white">
-    <div id="header" style="width: 1200px;height: 100px;margin: auto;padding:10px ">
-        <div id="hedader_right" style="width: 720px;float: right;">
-            <div id="header_right_top" style="height: 40px"><span
-                    style="width: 24px;height: 24px ;background: url(images/lock.png);display:block ;float: right;"></span><a
-                    class="yekan fontsm" href="/login" style=" color: cadetblue;float: right ;margin:0 10px 0 0">فروشگاه
-                اینترنتی یاکا
-                کالا،واردشوید </a>
-                <span style="width: 24px;height: 24px ;background: url(images/register.png );display: block ;float: right;margin:0 20px 0 0">
-                    </span>
-                <a
-                        class="yekan fontsm" href="/sinup" style="color: cadetblue;float: right;margin:0 10px 0 0 ;">
-                    ثبت نام</a>
+}
 
+body {
+    margin: 0;
+    background: #ccc
+}
+
+header {
+    background: white
+}
+
+#header {
+    width: 1200px;
+    height: 100px;
+    margin: auto;
+    padding: 10px
+}
+
+#header #hedader_right {
+    width: 720px;
+    float: right;
+}
+
+#header_right_top {
+    height: 40px
+}
+
+#header_right_top #header_icon_lock {
+    width: 24px;
+    height: 24px;
+    background: url(images/lock.png);
+    display: block;
+    float: right;
+}
+
+#header_right_top .header_shop_log_text {
+    color: cadetblue;
+    float: right;
+    margin: 0 10px 0 0
+}
+
+#header_right_top #header_register_icon {
+    width: 24px;
+    height: 24px;
+    background: url(images/register.png);
+    display: block;
+    float: right;
+    margin: 0 20px 0 0
+}
+
+#header_right_top .register_text {
+    color: cadetblue;
+    float: right;
+    margin: 0 10px 0 0;
+}
+
+#header_right_bottom {
+    height: 50px
+}
+
+#header_right_bottom #basket_top {
+    width: 190px;
+    height: 40px;
+    float: right
+}
+
+#header_right_bottom #basket_top_right {
+    width: 54px;
+    height: 100%;
+    background: #52cb53 url(images/basket.png) center no-repeat;
+    float: right
+}
+
+#header_right_bottom #basket_top_left {
+    width: 96px;
+    height: 100%;
+    background: #4ca14d;
+    float: right;
+    padding: 0 20px;
+    line-height: 34px
+}
+
+#basket_top_left .header_buy {
+    color: #ffffff;
+}
+
+#header_right_bottom #header_cicr {
+    background: #52cb53;
+    width: 25px;
+    height: 25px;
+    display: block;
+    float: left;
+    border-radius: 100%;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 7px;
+    color: #ffffff;
+}
+
+#search_top {
+    width: 480px;
+    height: 40px;
+    float: right;
+    margin-right: 30px;
+    position: relative
+}
+
+#search_top #search_inp {
+    padding: 0 10px;
+    width: 480px;
+    height: 35px;
+    float: right;
+    margin-top: 1px;
+    border: solid 2px #eeeeee;
+    color: #575658
+}
+
+#search_top #search_icon {
+    background: #575658 url(images/search.png) no-repeat center;
+    display: block;
+    width: 40px;
+    height: 38px;
+    position: absolute;
+    left: -23px;
+    top: 1px
+}
+
+#header_left {
+    width: 200px;
+    height: 100px;
+    float: left;
+}
+
+#header_left img {
+    width: 200px;
+    height: 100px;
+    float: left;
+}
+</style>
+<body>
+<header>
+    <div id="header">
+
+        <div id="hedader_right">
+            <div id="header_right_top">
+                <span id="header_icon_lock"></span>
+                <a class="header_shop_log_text yekan fontsm" href="/login">فروشگاه اینترنتی یاکا کالا،واردشوید</a>
+                <span id="header_register_icon"></span>
+                <a class="register_text yekan fontsm" href="/sinup">ثبت نام</a>
             </div>
-            <div id="header_right_bottom" style="height: 50px;">
-                <div id="basket_top" style="width: 190px ;height: 40px;float: right">
-                    <div id="basket_top_right"
-                         style="width: 54px ;height: 100%;background: #52cb53 url(images/basket.png)center no-repeat;float: right"></div>
-                    <div id="basket_top_left"
-                         style="width: 96px;height: 100%;background:#4ca14d ;float:right;padding: 0 20px;line-height: 34px">
-                        <span class="fontmd yekan" style="color: #ffffff;">سبد خرید</span><span
-                            style="background: #52cb53; width: 25px ;height: 25px;display: block;float: left;border-radius:100%;line-height: 25px;text-align: center ;margin-top: 7px;color: #ffffff;">0</span>
+
+            <div id="header_right_bottom">
+                <div id="basket_top">
+                    <div id="basket_top_right"></div>
+                    <div id="basket_top_left">
+                        <span class="header_buy fontmd yekan">سبد خرید</span>
+                        <span id="header_cicr">0</span>
                     </div>
                 </div>
-                <div id="search_top"
-                     style="width: 480px ;height: 40px;float: right;margin-right: 30px;position: relative"><input
-                        style="padding: 0 10px;width: 480px ;height: 35px;float: right;margin-top: 1px;border: solid 2px #eeeeee;color: #575658"
-                        placeholder="محصول،برند یا دسته خود رابنویسید..."><span
-                        style="background: #575658 url(images/search.png) no-repeat center; display: block;width: 40px;height: 38px;position: absolute;left: -23px;top: 1px"></span>
+
+                <div id="search_top">
+                    <input id="search_inp" placeholder="محصول،برند یا دسته خود رابنویسید...">
+                    <span id="search_icon"></span>
                 </div>
             </div>
         </div>
-        <div id="header_left" style="float: left"><img src="images/logo1.png" style="width: 200px;height: 100px"></div>
+
+        <div id="header_left"><img src="images/logo1.png"></div>
     </div>
+
 </header>
 <style> nav {
     width: 100%;
@@ -445,17 +578,17 @@ li {
                 <ul>
                     <li>
                         <a>
-                        <div class="side_news_right"><img src="images/nivea.png" width="70px" height="70px"></div>
-                        <div class="side_news_left"><span>شروع محصولات جدید نیوا برا اولین بار در ایران</span>
-                            <p>پنج شنبه 20 اسفند 97</p></div>
-                    </a>
+                            <div class="side_news_right"><img src="images/nivea.png" width="70px" height="70px"></div>
+                            <div class="side_news_left"><span>شروع محصولات جدید نیوا برا اولین بار در ایران</span>
+                                <p>پنج شنبه 20 اسفند 97</p></div>
+                        </a>
                     </li>
                     <li>
                         <a>
-                        <div class="side_news_right"><img src="images/nivea.png" width="70px" height="70px"></div>
-                        <div class="side_news_left"><span>شروع محصولات جدید نیوا برا اولین بار در ایران</span>
-                            <p>پنج شنبه 20 اسفند 97</p></div>
-                    </a>
+                            <div class="side_news_right"><img src="images/nivea.png" width="70px" height="70px"></div>
+                            <div class="side_news_left"><span>شروع محصولات جدید نیوا برا اولین بار در ایران</span>
+                                <p>پنج شنبه 20 اسفند 97</p></div>
+                        </a>
                     </li>
                     <li><a>
                         <div class="side_news_right"><img src="images/nivea.png" width="70px" height="70px"></div>
@@ -472,680 +605,869 @@ li {
             </div>
         </div>
     </div>
-</div>
-<style>
 
-    #content {
-        width: 890px;
-        float: right;
-        margin-right: 20px;
-        margin-top: 8px;
-    }
+    <style>
 
-    #slider {
-        height: 310px;
-        border-radius: 4px;
-        overflow: hidden;
-        position: relative;
-        box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
+        #content {
+            width: 890px;
+            float: right;
+            margin-right: 20px;
+            margin-top: 8px;
+        }
 
-    }
+        #slider {
+            height: 310px;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
 
-    #slider_img {
-        height: 260px;
-    }
+        }
 
-    #slider_img img {
-        width: 100%;
-        height: 260px;
-        display: none;
-    }
+        #slider_img {
+            height: 260px;
+        }
 
-    #slider #prev {
-        display: block;
-        width: 30px;
-        height: 50px;
-        background: url(images/arrow_slider.png) no-repeat;
-        position: absolute;
-        right: 0;
-        top: 125px;
-        cursor: pointer;
+        #slider_img img {
+            width: 100%;
+            height: 260px;
+            display: none;
+        }
 
-        background-position: 0 -33px;
-    }
+        #slider #prev {
+            display: block;
+            width: 30px;
+            height: 50px;
+            background: url(images/arrow_slider.png) no-repeat;
+            position: absolute;
+            right: 0;
+            top: 125px;
+            cursor: pointer;
 
-    #slider #next {
-        display: block;
-        width: 30px;
-        height: 50px;
-        background: url(images/arrow_slider.png) no-repeat;
-        position: absolute;
-        left: 13px;
-        top: 108px;
-        background-position: 0 16px;
-        cursor: pointer;
+            background-position: 0 -33px;
+        }
 
-    }
+        #slider #next {
+            display: block;
+            width: 30px;
+            height: 50px;
+            background: url(images/arrow_slider.png) no-repeat;
+            position: absolute;
+            left: 13px;
+            top: 108px;
+            background-position: 0 16px;
+            cursor: pointer;
 
-    #slider_navigator {
-        width: 100%;
-        height: 50px;
-        background: rgba(0, 0, 0, .5);
-    }
+        }
 
-    #slider_navigator ul {
-        padding: 0;
-        height: 50px;
-    }
+        #slider_navigator {
+            width: 100%;
+            height: 50px;
+            background: rgba(0, 0, 0, .5);
+        }
 
-    #slider_navigator ul li {
-        float: right;
-        height: 50px;
-        width: 178px;
-    }
+        #slider_navigator ul {
+            padding: 0;
+            height: 50px;
+        }
 
-    #slider_navigator ul li a {
-        width: 100%;
-        height: 100%;
-        display: block;
-        font-family: yekan;
-        font-size: 10pt;
-        color: #ffff;
-        text-align: center;
-        line-height: 50px;
-        cursor: pointer;
-    }
+        #slider_navigator ul li {
+            float: right;
+            height: 50px;
+            width: 178px;
+        }
 
-    #slider_navigator .active > a {
-        background: #fff;
-        color: #000;
-        position: relative;
+        #slider_navigator ul li a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            font-family: yekan;
+            font-size: 10pt;
+            color: #ffff;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
 
-    }
+        #slider_navigator .active > a {
+            background: #fff;
+            color: #000;
+            position: relative;
 
-    #slider_navigator .active > a::after {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 11.5px 14px 11.5px;
-        border-color: transparent transparent #fff transparent;
-        position: absolute;
-        top: -14px;
-        right: 0;
-        left: 0;
-        margin: 0 auto;
-        content: "";
-    }
+        }
+
+        #slider_navigator .active > a::after {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 11.5px 14px 11.5px;
+            border-color: transparent transparent #fff transparent;
+            position: absolute;
+            top: -14px;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            content: "";
+        }
 
 
-</style>
-<div id="content">
-    <div id="slider">
+    </style>
+    <div id="content">
+        <div id="slider">
 
-        <div>
-            <span id="prev"></span>
+            <div>
+                <span id="prev"></span>
+            </div>
+            <div>
+                <span id="next"></span>
+            </div>
+
+            <div id="slider_img">
+                <a>
+                    <img class="item" src="images/slider1.jpg">
+                </a>
+                <a>
+                    <img class="item" src="images/slider2.jpg">
+                </a>
+                <a>
+                    <img class="item" src="images/slider_durbin.jpg">
+                </a>
+                <a>
+                    <img class="item" src="images/slider-lavazem.jpg">
+                </a>
+                <a>
+                    <img class="item" src="images/slider-wood.jpg">
+                </a>
+            </div>
+
+            <div id="slider_navigator">
+                <ul>
+                    <li>
+                        <a>لوازم بهداشتی</a>
+                    </li>
+                    <li>
+                        <a>لپتاپ جدید سری vio</a>
+                    </li>
+                    <li>
+                        <a>لوازم جانبی دوربین</a>
+                    </li>
+                    <li>
+                        <a>لوازم خانگی</a>
+                    </li>
+                    <li>
+                        <a>سرویس چوب</a>
+                    </li>
+                </ul>
+            </div>
+
+            <style>
+                #servicesfech {
+                    height: 76px;
+                    margin: 10px 0 0 0;
+                    background: #f9f9f9;
+                    width: 890px;
+                    border-radius: 4px;
+                    overflow: hidden;
+                    box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
+
+                }
+
+                #servicesfech ul {
+                    width: 100%;
+                    height: 100%;
+                    padding: 0;
+                }
+
+                #servicesfech ul li {
+                    width: 178px;
+                    height: 100%;
+                    float: right;
+                }
+
+                #servicesfech ul li a {
+                    width: 100%;
+                    height: 51px;
+                    display: block;
+                    font-family: yekan;
+                    font-size: 10pt;
+                    padding-top: 25px;
+                    cursor: pointer;
+                }
+
+                #servicesfech ul li a i {
+                    width: 40px;;
+                    vertical-align: middle;
+                    height: 24px;
+                    display: inline-block;
+                    background: url(images/slices.png);
+                }
+            </style>
+
         </div>
-        <div>
-            <span id="next"></span>
-        </div>
-
-        <div id="slider_img">
-            <a>
-                <img class="item" src="images/slider1.jpg">
-            </a>
-            <a>
-                <img class="item" src="images/slider2.jpg">
-            </a>
-            <a>
-                <img class="item" src="images/slider_durbin.jpg">
-            </a>
-            <a>
-                <img class="item" src="images/slider-lavazem.jpg">
-            </a>
-            <a>
-                <img class="item" src="images/slider-wood.jpg">
-            </a>
-        </div>
-
-        <div id="slider_navigator">
+        <div id="servicesfech">
             <ul>
                 <li>
-                    <a>لوازم بهداشتی</a>
+                    <a>
+                        <i style="background-position: -210px -473px"></i>
+                        7 روز ضمانت بازگشت
+                    </a>
                 </li>
                 <li>
-                    <a>لپتاپ جدید سری vio</a>
+                    <a>
+                        <i style="background-position: -252px -473px"></i>
+                        پرداخت در محل
+                    </a>
                 </li>
                 <li>
-                    <a>لوازم جانبی دوربین</a>
+                    <a>
+                        <i style="background-position: -309px -473px"></i>
+                        پست سریع
+                    </a>
                 </li>
                 <li>
-                    <a>لوازم خانگی</a>
+                    <a>
+                        <i style="background-position: -158px -473px"></i>
+                        ضمانت اصل بودن کالا
+                    </a>
                 </li>
                 <li>
-                    <a>سرویس چوب</a>
+                    <a>
+                        <i style="background-position: -101px -474px"></i>
+                        تضمین بهترین قیمت
+                    </a>
                 </li>
             </ul>
         </div>
-
         <style>
-            #servicesfech {
-                height: 76px;
-                margin: 10px 0 0 0;
-                background: #f9f9f9;
+            #slider2 {
                 width: 890px;
+                height: 304px;
+                background: #ececec;
+                margin-top: 10px;
                 border-radius: 4px;
                 overflow: hidden;
+                position: relative;
                 box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+            }
+
+            #slider2_content {
+                width: 705px;
+                height: 304px;
+                float: right;
+                background: url(images/slider2_bg.jpg) no-repeat;
+            }
+
+            #slider2_content > a p:nth-child(1) {
+
+                color: red;
+                font-size: 13pt;
+                font-family: yekan;
+                margin: 30px 30px 0 0;
+            }
+
+            .slider2_content_r {
+                width: 400px;
+                height: 304px;
+                float: right;
+                position: relative;
+            }
+
+            .slider2_content_r .price_info {
+                height: 35px;
+                margin: 10px 30px;
+            }
+
+            .price_info .price_info_r {
+                width: 70px;
+                height: 100%;
+                background: #B8B8B8;
+                float: right;
+                position: relative;
+                color: white;
+                font-family: yekan;
+                font-size: 10.5pt;
+                text-align: center;
+                line-height: 32px;
 
             }
 
-            #servicesfech ul {
-                width: 100%;
+            .slider2_content_l img {
+                width: 250px;
+                height: 80%;
+                margin-right: 27px;
+            }
+
+            .slider2_content_l {
+                width: 305px;
                 height: 100%;
+                float: left;
+            }
+
+            .slider2_content_l p {
+                text-align: center !important;
+                margin-left: 40px !important;
+            }
+
+            .slider_navigator2 {
+                width: 184px;
+                float: left;
+                height: 100%;
+                border-right: 1px solid rgba(175, 175, 175, 0.52);
+                background: #E3E3E3;
+            }
+
+            .price_info .price_info_r::after {
+                content: " ";
+                width: 96%;
+                border-bottom: 1px solid #3B3B3B;
+                transform: rotate(-25deg);
+                position: absolute;
+                right: 0;
+                left: 0;
+                top: 17px;
+            }
+
+            .price_info .price_info_r::before {
+                content: " ";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 7.5px 12px 7.5px 0;
+                border-color: transparent #B8B8B8 transparent transparent;
+                position: absolute;
+                top: 0;
+                left: -11px;
+                bottom: 0;
+                margin: auto 0;
+                z-index: 2;
+
+            }
+
+            .price_info .price_info_l::after {
+                content: " ";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 7.5px 13px 7.5px 0;
+                border-color: transparent #ffffff transparent transparent;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto 0;
+
+            }
+
+            .price_info .price_info_l {
+                margin-right: 2px;
+                width: 155px;
+                height: 100%;
+                float: right;
+                background: rgba(235, 0, 23, 0.73);
+                position: relative;
+                color: white;
+                font-family: yekan;
+                font-size: 10.5pt;
+                text-align: center;
+                line-height: 32px;
+            }
+
+            .slider_navigator2 ul {
                 padding: 0;
             }
 
-            #servicesfech ul li {
-                width: 178px;
+            .slider_navigator2 ul li {
+                height: 38px;
+                width: 100%;
+            }
+
+            .slider_navigator2 ul li a {
+                height: 38px;
+                width: 100%;
+                display: block;
+                font-family: yekan;
+                font-size: 10pt;
+                text-align: center;
+                line-height: 32px;
+            }
+
+            .content_finish {
+                width: 705px;
+                height: 100%;
+                text-align: center;
+                line-height: 235px;
+                color: red;
+                position: absolute;
+                font-family: yekan;
+                font-size: 35pt;
+                top: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.2);
+                display: none;
+
+            }
+
+            .slider_navigator2 .active {
+                background: #d5000d;
+                color: white;
+                position: relative;
+            }
+
+            .slider_navigator2 .active::after {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 19px 0 19px 19px;
+                border-color: transparent transparent transparent #d5000d;
+                content: '';
+                position: absolute;
+                right: -19px;
+                top: 0;
+            }
+
+            .clock {
+
+                position: absolute;
+                top: 157px;
+                right: -110px;
+            }
+
+        </style>
+        <div id="slider2">
+            <div class="clock jCountdown"></div>
+
+            <div id="slider2_content">
+                <a class="item">
+                    <div class="slider2_content_r">
+                        <p>جشنواره ماه نو</p>
+                        <div class="price_info">
+                            <div class="price_info_r">29</div>
+                            <div class="price_info_l">18 هزار تومان</div>
+                        </div>
+                        <p class="yekan fontsm" style="float: right;width: 100%;margin: 5px 30px">توان مصرفی</p>
+                        <p class="yekan fontsm" style="float: right;width: 100%;margin: 10px 30px">مقاوم در برابر
+                            ضربه</p>
+
+                        <div class="content_finish">
+                            تمام شد!
+                        </div>
+                    </div>
+
+                    <div class="slider2_content_l">
+                        <p class="fontlg yekan">
+                            دسته بازی گیمینگ
+                        </p>
+                        <img src="images/slider2_item1.jpg">
+                    </div>
+                </a>
+
+                <a class="item">
+                    <div class="slider2_content_r">
+                        <p>اربعین حسینی</p>
+                        <div class="price_info">
+                            <div class="price_info_r">60</div>
+                            <div class="price_info_l">50 هزار تومان</div>
+                        </div>
+                        <p class="yekan fontsm" style="float: right;width: 100%;margin: 5px 30px">پر قدرت</p>
+                        <p class="yekan fontsm" style="float: right;width: 100%;margin: 10px 30px">سی پی یو cori7</p>
+
+
+                        <div class="content_finish">
+                            تمام شد!
+                        </div>
+                    </div>
+
+                    <div class="slider2_content_l">
+                        <p class="fontlg yekan">
+                            تبلت های ایسوس
+                        </p>
+                        <img src="images/slider2_3.jpg">
+                    </div>
+                </a>
+
+            </div>
+            <div class="slider_navigator2">
+                <ul>
+                    <li><a>
+                        دسته بازی
+                    </a></li>
+                    <li><a>
+                        تبلت
+                    </a></li>
+                    <li><a>
+                        مبلمان اداری
+                    </a></li>
+                    <li><a>
+                        یخچال ال جی
+                    </a></li>
+                    <li><a>
+                        فرش دستباف
+                    </a></li>
+                    <li><a>
+                        ال ای دی سامسونگ
+                    </a></li>
+                    <li><a>
+                        لوستر
+                    </a></li>
+                    <li><a>
+                        لپ تاپ ایسوس
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+        <style>
+            .sliderScrool {
+                width: 890px;
+                height: 305px;
+                box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
+                margin-top: 10px;
+                background: white;
+                border-radius: 4px;
+                overflow: hidden;
+                float: right;
+            }
+
+            .sliderScrool h3 {
+                height: 35px;
+                background: #ececec;
+                margin: 0;
+                padding-right: 5px;
+                font-size: 10.5pt;
+                font-family: yekan;
+                padding-top: 10px;
+                font-weight: normal;
+            }
+
+            .sliderScrool_conent {
+                width: 890px;
+                height: 260px;
+            }
+
+            .sliderScrool_prv, .sliderScrool_next {
+                width: 55px;
+                height: 100%;
+                float: right;
+
+            }
+
+            .sliderScrool_main {
+                width: 780px;
+                height: 100%;
+                float: right;
+                overflow: hidden;
+
+            }
+
+            .sliderScrool_prv .prev2 {
+                background: url(images/slices.png) no-repeat;
+                width: 16px;
+                height: 35px;
+                background-position: -852px -677px;
+                display: block;
+                margin-top: 110px;
+                margin-right: 15px;
+                cursor: pointer;
+            }
+
+            .sliderScrool_next .next2 {
+                background: url(images/slices.png) no-repeat;
+                width: 16px;
+                height: 35px;
+                background-position: -813px -677px;
+                display: block;
+                margin-top: 110px;
+                margin-right: 20px;
+                cursor: pointer;
+            }
+
+            .sliderScrool .sliderScrool_main ul {
+                padding: 0;
+                height: 100%;
+            }
+
+            .sliderScrool .sliderScrool_main ul li {
+                width: 195px;
                 height: 100%;
                 float: right;
             }
 
-            #servicesfech ul li a {
-                width: 100%;
-                height: 51px;
+            .sliderScrool .sliderScrool_main ul li a {
                 display: block;
-                font-family: yekan;
-                font-size: 10pt;
-                padding-top: 25px;
-                cursor: pointer;
+                text-align: center;
             }
 
-            #servicesfech ul li a i {
-                width: 40px;;
-                vertical-align: middle;
-                height: 24px;
-                display: inline-block;
-                background: url(images/slices.png);
+            .sliderScrool .price {
+                color: #52cb53;
+            }
+
+            .sliderScrool .scorol_p {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+
+            .sliderScrool .img_scrool {
+                padding-top: 20px;
+                width: 140PX;
+                height: 150px;
             }
         </style>
+        <div class="sliderScrool">
+            <h3>همه چی در یاکا</h3>
+            <div class="sliderScrool_conent">
 
-    </div>
-    <div id="servicesfech">
-        <ul>
-            <li>
-                <a>
-                    <i style="background-position: -210px -473px"></i>
-                    7 روز ضمانت بازگشت
-                </a>
-            </li>
-            <li>
-                <a>
-                    <i style="background-position: -252px -473px"></i>
-                    پرداخت در محل
-                </a>
-            </li>
-            <li>
-                <a>
-                    <i style="background-position: -309px -473px"></i>
-                    پست سریع
-                </a>
-            </li>
-            <li>
-                <a>
-                    <i style="background-position: -158px -473px"></i>
-                    ضمانت اصل بودن کالا
-                </a>
-            </li>
-            <li>
-                <a>
-                    <i style="background-position: -101px -474px"></i>
-                    تضمین بهترین قیمت
-                </a>
-            </li>
-        </ul>
-    </div>
-    <style>
-        #slider2 {
-            width: 890px;
-            height: 304px;
-            background: #ececec;
-            margin-top: 10px;
-            border-radius: 4px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-        }
-
-        #slider2_content {
-            width: 705px;
-            height: 304px;
-            float: right;
-            background: url(images/slider2_bg.jpg) no-repeat;
-        }
-
-        #slider2_content > a p:nth-child(1) {
-
-            color: red;
-            font-size: 13pt;
-            font-family: yekan;
-            margin: 30px 30px 0 0;
-        }
-
-        .slider2_content_r {
-            width: 400px;
-            height: 304px;
-            float: right;
-            position: relative;
-        }
-
-        .slider2_content_r .price_info {
-            height: 35px;
-            margin: 10px 30px;
-        }
-
-        .price_info .price_info_r {
-            width: 70px;
-            height: 100%;
-            background: #B8B8B8;
-            float: right;
-            position: relative;
-            color: white;
-            font-family: yekan;
-            font-size: 10.5pt;
-            text-align: center;
-            line-height: 32px;
-
-        }
-
-        .slider2_content_l img {
-            width: 250px;
-            height: 80%;
-            margin-right: 27px;
-        }
-
-        .slider2_content_l {
-            width: 305px;
-            height: 100%;
-            float: left;
-        }
-
-        .slider2_content_l p {
-            text-align: center !important;
-            margin-left: 40px !important;
-        }
-
-        .slider_navigator2 {
-            width: 184px;
-            float: left;
-            height: 100%;
-            border-right: 1px solid rgba(175, 175, 175, 0.52);
-            background: #E3E3E3;
-        }
-
-        .price_info .price_info_r::after {
-            content: " ";
-            width: 96%;
-            border-bottom: 1px solid #3B3B3B;
-            transform: rotate(-25deg);
-            position: absolute;
-            right: 0;
-            left: 0;
-            top: 17px;
-        }
-
-        .price_info .price_info_r::before {
-            content: " ";
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 7.5px 12px 7.5px 0;
-            border-color: transparent #B8B8B8 transparent transparent;
-            position: absolute;
-            top: 0;
-            left: -11px;
-            bottom: 0;
-            margin: auto 0;
-            z-index: 2;
-
-        }
-
-        .price_info .price_info_l::after {
-            content: " ";
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 7.5px 13px 7.5px 0;
-            border-color: transparent #ffffff transparent transparent;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto 0;
-
-        }
-
-        .price_info .price_info_l {
-            margin-right: 2px;
-            width: 155px;
-            height: 100%;
-            float: right;
-            background: rgba(235, 0, 23, 0.73);
-            position: relative;
-            color: white;
-            font-family: yekan;
-            font-size: 10.5pt;
-            text-align: center;
-            line-height: 32px;
-        }
-
-        .slider_navigator2 ul {
-            padding: 0;
-        }
-
-        .slider_navigator2 ul li {
-            height: 38px;
-            width: 100%;
-        }
-
-        .slider_navigator2 ul li a {
-            height: 38px;
-            width: 100%;
-            display: block;
-            font-family: yekan;
-            font-size: 10pt;
-            text-align: center;
-            line-height: 32px;
-        }
-
-        .content_finish {
-            width: 705px;
-            height: 100%;
-            text-align: center;
-            line-height: 235px;
-            color: red;
-            position: absolute;
-            font-family: yekan;
-            font-size: 35pt;
-            top: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.2);
-            display: none;
-
-        }
-
-        .slider_navigator2 .active {
-            background: #d5000d;
-            color: white;
-            position: relative;
-        }
-
-        .slider_navigator2 .active::after {
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 19px 0 19px 19px;
-            border-color: transparent transparent transparent #d5000d;
-            content: '';
-            position: absolute;
-            right: -19px;
-            top: 0;
-        }
-
-        .clock {
-
-            position: absolute;
-            top: 157px;
-            right: -110px;
-        }
-
-    </style>
-    <div id="slider2">
-        <div class="clock jCountdown"></div>
-
-        <div id="slider2_content">
-            <a class="item">
-                <div class="slider2_content_r">
-                    <p>جشنواره ماه نو</p>
-                    <div class="price_info">
-                        <div class="price_info_r">29</div>
-                        <div class="price_info_l">18 هزار تومان</div>
-                    </div>
-                    <p class="yekan fontsm" style="float: right;width: 100%;margin: 5px 30px">توان مصرفی</p>
-                    <p class="yekan fontsm" style="float: right;width: 100%;margin: 10px 30px">مقاوم در برابر ضربه</p>
-
-                    <div class="content_finish">
-                        تمام شد!
-                    </div>
+                <div class="sliderScrool_prv">
+                    <span class="prev2" onclick="scroolslider('right',this)"></span>
                 </div>
-
-                <div class="slider2_content_l">
-                    <p class="fontlg yekan">
-                        دسته بازی گیمینگ
-                    </p>
-                    <img src="images/slider2_item1.jpg">
+                <div class="sliderScrool_main">
+                    <ul>
+                        <li>
+                            <a>
+                                <img class="img_scrool" src="images/sliderscroll2_1.jpg">
+                                <img src="images/exclusive-blue.png">
+                                <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                                <span class="price yekan fontsm">1,200,000</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img class="img_scrool" src="images/sliderscroll2_2.jpg">
+                                <img src="images/exclusive-blue.png">
+                                <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                                <span class="price yekan fontsm">1,200,000</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img class="img_scrool" src="images/sliderscroll2_3.jpg">
+                                <img src="images/exclusive-blue.png">
+                                <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                                <span class="price yekan fontsm">1,200,000</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img class="img_scrool" src="images/sliderscroll2_4.jpg">
+                                <img src="images/exclusive-blue.png">
+                                <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                                <span class="price yekan fontsm">1,200,000</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img class="img_scrool" src="images/sliderscroll2_4.jpg">
+                                <img src="images/exclusive-blue.png">
+                                <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                                <span class="price yekan fontsm">1,200,000</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </a>
-
-            <a class="item">
-                <div class="slider2_content_r">
-                    <p>اربعین حسینی</p>
-                    <div class="price_info">
-                        <div class="price_info_r">60</div>
-                        <div class="price_info_l">50 هزار تومان</div>
-                    </div>
-                    <p class="yekan fontsm" style="float: right;width: 100%;margin: 5px 30px">پر قدرت</p>
-                    <p class="yekan fontsm" style="float: right;width: 100%;margin: 10px 30px">سی پی یو cori7</p>
-
-
-                    <div class="content_finish">
-                        تمام شد!
-                    </div>
+                <div class="sliderScrool_next">
+                    <span class="next2" onclick="scroolslider('left',this)"></span>
                 </div>
-
-                <div class="slider2_content_l">
-                    <p class="fontlg yekan">
-                        تبلت های ایسوس
-                    </p>
-                    <img src="images/slider2_3.jpg">
-                </div>
-            </a>
+            </div>
 
         </div>
-        <div class="slider_navigator2">
-            <ul>
-                <li><a>
-                    دسته بازی
-                </a></li>
-                <li><a>
-                    تبلت
-                </a></li>
-                <li><a>
-                    مبلمان اداری
-                </a></li>
-                <li><a>
-                    یخچال ال جی
-                </a></li>
-                <li><a>
-                    فرش دستباف
-                </a></li>
-                <li><a>
-                    ال ای دی سامسونگ
-                </a></li>
-                <li><a>
-                    لوستر
-                </a></li>
-                <li><a>
-                    لپ تاپ ایسوس
-                </a></li>
-            </ul>
-        </div>
-    </div>
-    <style>
-        .sliderScrool {
-            width: 890px;
-            height: 305px;
-            box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
-            margin-top: 10px;
-            background: white;
-            border-radius: 4px;
-            overflow: hidden;
-        }
+        <style>
+            .direct-acses {
+                width: 290px;
+                height: 190px;
+                margin-top: 10px;
+                margin-left: 10px;
+                overflow: hidden;
+                box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
+                background: white;
+                border-radius: 4px;
+                display: block;
+                float: right;
 
-        .sliderScrool h3 {
-            height: 35px;
-            background: #ececec;
-            margin: 0;
-            padding-right: 5px;
-            font-size: 10.5pt;
-            font-family: yekan;
-            padding-top: 10px;
-            font-weight: normal;
-        }
+            }
 
-        .sliderScrool_conent {
-            width: 890px;
-            height: 260px;
-        }
+            .direct-acses2 {
+                width: 590px;
+                height: 190px;
+                margin-top: 10px;
+                overflow: hidden;
+                box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
+                background: white;
+                border-radius: 4px;
+                display: block;
+                float: right;
 
-        .sliderScrool_prv, .sliderScrool_next {
-            width: 55px;
-            height: 100%;
-            float: right;
+            }
 
-        }
+            .direct-acses3 {
+                width: 290px;
+                height: 190px;
+                margin-top: 10px;
+                overflow: hidden;
+                box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
+                margin-right: 10px;
+                border-radius: 4px;
+                display: block;
+                float: right;
+                background: white;
+            }
+        </style>
+        <a class="direct-acses">
+            <img src="images/1.png" width="290x" height="190px">
+        </a>
 
-        .sliderScrool_main {
-            width: 780px;
-            height: 100%;
-            float: right;
-            overflow: hidden;
+        <a class="direct-acses2">
+            <img src="images/home-appliance.png" width="590px" height="190px">
+        </a>
+        <a class="direct-acses2">
+            <img src="images/hom2ap.png" width="590px" height="190px">
+        </a>
+        <a class="direct-acses3">
+            <img src="images/3.png" width="290px" height="190px">
+        </a>
 
-        }
+        <div class="sliderScrool">
+            <h3>پر بازدیدترین ها</h3>
+            <div class="sliderScrool_conent">
 
-        .sliderScrool_prv .prev2 {
-            background: url(images/slices.png) no-repeat;
-            width: 16px;
-            height: 35px;
-            background-position: -852px -677px;
-            display: block;
-            margin-top: 110px;
-            margin-right: 15px;
-            cursor: pointer;
-        }
-
-        .sliderScrool_next .next2 {
-            background: url(images/slices.png) no-repeat;
-            width: 16px;
-            height: 35px;
-            background-position: -813px -677px;
-            display: block;
-            margin-top: 110px;
-            margin-right: 20px;
-            cursor: pointer;
-        }
-
-        .sliderScrool .sliderScrool_main ul {
-            padding: 0;
-            height: 100%;
-        }
-
-        .sliderScrool .sliderScrool_main ul li {
-            width: 195px;
-            height: 100%;
-            float: right;
-        }
-
-        .sliderScrool .sliderScrool_main ul li a {
-            display: block;
-            text-align: center;
-        }
-
-        .sliderScrool .price {
-            color: #52cb53;
-        }
-
-        .sliderScrool .scorol_p {
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        .sliderScrool .img_scrool {
-            padding-top: 20px;
-        }
-    </style>
-    <div class="sliderScrool">
-        <h3>همه چی در یاکا</h3>
-        <div class="sliderScrool_conent">
-
-            <div class="sliderScrool_prv">
-                <span class="prev2"></span>
+                <div class="sliderScrool_prv">
+                    <span class="prev2" onclick="scroolslider('right',this)"></span>
+                </div>
+                <div class="sliderScrool_main">
+                    <ul>
+                        <li>
+                            <a>
+                                <img class="img_scrool" src="images/scrollslider_2.jpg">
+                                <img src="images/exclusive-blue.png">
+                                <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                                <span class="price yekan fontsm">1,200,000</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img class="img_scrool" src="images/scrollslider_3.jpg">
+                                <img src="images/exclusive-blue.png">
+                                <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                                <span class="price yekan fontsm">1,200,000</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img class="img_scrool" src="images/scrollslider_4.jpg">
+                                <img src="images/exclusive-blue.png">
+                                <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                                <span class="price yekan fontsm">1,200,000</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img class="img_scrool" src="images/scrollslider_5.jpg">
+                                <img src="images/exclusive-blue.png">
+                                <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                                <span class="price yekan fontsm">1,200,000</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img class="img_scrool" src="images/sliderscroll2_4.jpg">
+                                <img src="images/exclusive-blue.png">
+                                <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                                <span class="price yekan fontsm">1,200,000</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sliderScrool_next">
+                    <span class="next2" onclick="scroolslider('left',this)"></span>
+                </div>
             </div>
-            <div class="sliderScrool_main">
-                <ul>
-                    <li>
-                        <a>
-                            <img class="img_scrool" src="images/sliderscroll2_1.jpg">
-                            <img src="images/exclusive-blue.png">
-                            <p class="yekan fontsm scorol_p">سری جدید اپل</p>
-                            <span class="price yekan fontsm">1,200,000</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <img class="img_scrool" src="images/sliderscroll2_2.jpg">
-                            <img src="images/exclusive-blue.png">
-                            <p class="yekan fontsm scorol_p">سری جدید اپل</p>
-                            <span class="price yekan fontsm">1,200,000</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <img class="img_scrool" src="images/sliderscroll2_3.jpg">
-                            <img src="images/exclusive-blue.png">
-                            <p class="yekan fontsm scorol_p">سری جدید اپل</p>
-                            <span class="price yekan fontsm">1,200,000</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <img class="img_scrool" src="images/sliderscroll2_4.jpg">
-                            <img src="images/exclusive-blue.png">
-                            <p class="yekan fontsm scorol_p">سری جدید اپل</p>
-                            <span class="price yekan fontsm">1,200,000</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <img class="img_scrool" src="images/sliderscroll2_4.jpg">
-                            <img src="images/exclusive-blue.png">
-                            <p class="yekan fontsm scorol_p">سری جدید اپل</p>
-                            <span class="price yekan fontsm">1,200,000</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="sliderScrool_next">
-                <span class="next2"></span>
-            </div>
+
         </div>
 
+        <div class="sliderScrool">
+            <h3>جدیدترین کالاها</h3>
+            <div class="sliderScrool_conent">
+
+                <div class="sliderScrool_prv">
+                    <span class="prev2" onclick="scroolslider('right',this)"></span>
+                </div>
+                <div class="sliderScrool_main">
+                    <ul>
+                        <li>
+                            <a>
+                                <img class="img_scrool" src="images/1.png">
+                                <img src="images/exclusive-blue.png">
+                                <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                                <span class="price yekan fontsm">1,200,000</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img class="img_scrool" src="images/2.png">
+                                <img src="images/exclusive-blue.png">
+                                <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                                <span class="price yekan fontsm">1,200,000</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img class="img_scrool" src="images/3.png">
+                                <img src="images/exclusive-blue.png">
+                                <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                                <span class="price yekan fontsm">1,200,000</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img class="img_scrool" src="images/4.png">
+                                <img src="images/exclusive-blue.png">
+                                <p class="yekan fontsm scorol_p">سری جدید اپل</p>
+                                <span class="price yekan fontsm">1,200,000</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img class="img_scrool" src="images/5.png">
+                                <img src="images/exclusive-blue.png">
+                                <p class="yekan fontsm scorol_p">سری جدید میز اتو</p>
+                                <span class="price yekan fontsm">   465,000 تومان</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sliderScrool_next">
+                    <span class="next2" onclick="scroolslider('left',this)"></span>
+                </div>
+            </div>
+
+        </div>
+
+
     </div>
+
 </div>
+<style>
+    footer {
+        height: 300px;
+    }
+</style>
+<footer>
+    <div id="footer_top"></div>
+    <div id="footer_bottom"></div>
+
+</footer>
 <script type="text/javascript">
 
     //Start ScrollSlider
-    var scroolSliderTag = $('.sliderScrool');
-    var scroolSliderUl = scroolSliderTag.find('.sliderScrool_main ul');
-    var scroolSliderItems = scroolSliderUl.find('li');
-    var scroolSlidernumer = scroolSliderItems.length;
-    var scrollNumber = Math.ceil(scroolSlidernumer / 4);
-    var maxslider = -(scrollNumber - 1) * 780;
-    scroolSliderUl.css('width', scroolSlidernumer * 195);
+    function scroolslider(direction, tag) {
+        var span_tag = $(tag);
+        var scroolSliderTag = span_tag.parents('.sliderScrool');
+        var scroolSliderUl = scroolSliderTag.find('.sliderScrool_main ul');
+        var scroolSliderItems = scroolSliderUl.find('li');
+        var scroolSlidernumer = scroolSliderItems.length;
+        var scrollNumber = Math.ceil(scroolSlidernumer / 4);
+        var maxslider = -(scrollNumber - 1) * 780;
+        scroolSliderUl.css('width', scroolSlidernumer * 195);
 
-    function scroolslider(direction) {
         var marghinOld = scroolSliderUl.css('margin-right');
         marghinOld = parseFloat(marghinOld);
         var marginrightNew;
@@ -1161,16 +1483,11 @@ li {
         if (marginrightNew > 0) {
             marginrightNew = maxslider;
         }
-        scroolSliderUl.animate({'marginRight': marginrightNew}, 4000)
+        scroolSliderUl.animate({'marginRight': marginrightNew}, 2000)
 
     }
 
-    $('.next2').click(function () {
-        scroolslider('left');
-    });
-    $('.prev2').click(function () {
-        scroolslider('right');
-    });
+
     // End Scroll Slider
 
     // main Slider

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+
+</head>
+<body style="direction: rtl">
+<style>
+    ul, li, div, a, span, p {
+        direction: rtl;
+        text-align: right;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .div_test {
+        width: 400px;
+        height: 800px;
+        background: #e9e9e9;
+    }
+
+    .div_test ul {
+        width: 400px;
+        height: 800px;
+        padding: 0;
+        position: relative;
+
+    }
+
+    .div_test ul li {
+        width: 100%;
+        height: 100px;
+        transition: border 2s ease;
+    }
+
+    /*.div_test ul li:hover {*/
+    /*border: #e0e0e0 solid 1px;*/
+    /*}*/
+    .div_test ul {
+        width: 100%;
+        height: 100px;
+    }
+
+    .act {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 24px 8px 0;
+        border-color: transparent #8f8f8f transparent transparent;
+        left: -24px;
+        top: 35px;
+    }
+
+    .div_test ul li a {
+        display: block;
+        width: 100%;
+        height: 100px;
+    }
+
+</style>
+
+<div class="div_test">
+    <ul>
+        <li class="act">
+            <a>
+                <img style="width: 100px;height: 80px;margin-top: 10px" src="images/scrollslider_2.jpg">
+            </a>
+        </li>
+    </ul>
+
+</div>
+
+<script>
+
+</script>
+</body>
+</html>
